@@ -3,15 +3,14 @@ function titleCase(str) {
     var ary = low.split(" "); // split string into array
     var count = ary.length; // count items in array
     var i = 0; 
-    var word = ary[i]; 
     while (count > 0) { // while loop based on # of items in array
         var char = ary[i].charAt(0); // access first letter of word in array 
         var up = char.toUpperCase(); // capitalize fist letter
         var word = ary[i]; // get entire word
         var capWord = word.replace(char, up); // replace letter 
-        ary.splice(i,1,capWord); // add capitalized word back into array        
+        ary.splice(i,1,capWord); // add capitalized word back into array    
         count--; // decrease # of items in array
-        i++ // increase array index #
+        i++; // increase array index #
     }  var capitalize = ary.join(" "); // join array back to string 
         return capitalize; // return title case string 
 }
