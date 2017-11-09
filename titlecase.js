@@ -7,24 +7,17 @@ function titleCase(str) {
     while (count > 0) { // while loop based on # of items in array
         var char = ary[i].charAt(0); // access first letter of word in array 
         var up = char.toUpperCase(); // capitalize fist letter
-        ary.splice(i,1,up); // replaces uppercase letter back into array*/ 
-        console.log(ary);
-        
+        var word = ary[i]; // get entire word
+        var capWord = word.replace(char, up); // replace letter 
+        ary.splice(i,1,capWord); // add capitalized word back into array        
         count--; // decrease # of items in array
         i++ // increase array index #
-        console.log("current word is " + ary[i] );
-        
-    }  var titleCase = ary.join(" "); // join array back to string 
-       console.log(titleCase);
-        return titleCase; // return title case string 
+    }  var capitalize = ary.join(" "); // join array back to string 
+        return capitalize; // return title case string 
 }
 
-/* now replaces all words with capitalized letters. 
-/* need to figure out how to add the element instead of replacing.
-/* try splitting all items into separate arrays?
-
-
 titleCase("I'm a little tea pot");
+
 
 
 /* Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
