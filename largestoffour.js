@@ -1,48 +1,47 @@
 function largestOfFour(arr) {
     var largestArray = []; // create empty array to hold final results   
-    var i = arr.length // get length of array 
+    var i = arr.length; // get length of array 
     var j = 0; // sub array 
     var k = 0; // position in sub array
     var l = arr[j].length;  // get length of sub array  
     var largest = arr[j][k]; // sets first number in first sub array as largest
     var next = arr[j][k+1]; // gets next number in array
 while (i < 5) {
- for (var m = l; m > 1; m--) {
+ for (var m = l; m > 0; m--) { // loop through sub array elements as long as array has more than 1 value 
+     
     // check relative values of array elements
     if (largest > next) {  // if largest number is larger than next
             k++;     // skip to next position in array & re-run loop to check again
-              console.log("current position in array is " + k);
         } else {  // otherwise
             largest = next; // set "next" number as largest 
-            console.log("current largest value is " + largest);
-            k++;
-            if ( k < 5 ) {
+            k++; // move to next position in sub array
             var following = arr[j][k+1]; // get next number and call it "following"
-              console.log("current following value is " + following);
             next = following; // set "next" as "following" & re-run loop to check again
-            console.log("current next value is " + next);
             } else {
               largestArray.push(largest); // push resulting largest number to new array
-              i--; 
               j++; // move to next sub array
-              k = 0;
-              largest = arr[j][k];
-              next = arr[j][k+1];
+              i--; // reduce length of array
+              k = 0; // reset position of sub array to beginning
+              largest = arr[j][k]; // reset value of "largest"
+              next = arr[j][k+1]; // reset value of "next"
             }
     } largestArray.push(largest); // push resulting largest number to new array
       i--; 
       j++; // move to next sub array
+     if (i > 0) {
+         
+     }
+     
       k = 0;
       largest = arr[j][k];
       next = arr[j][k+1];
       console.log("largest value of new array is " + largest);
-      console.log("current length of array is " + i);
+      console.log("current length of array is " + i);*/
   } 
 } return largestArray; // return array of largest numbers from sub arrays
 }
 
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-        
+largestOfFour([[32, 35, 37, 39], [4, 5, 1, 3], [13, 27, 18, 26], [1000, 1001, 857, 1]]);
         
  
 // create new array to hold final result
@@ -70,5 +69,38 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return [27,5,39,1001].
 largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]) should return [9, 35, 97, 1000000]. */
 
+
+
+/* cycles through too many times, winding up at undefined. */
+
+function largestOfFour(arr) {
+    var largestArray = []; // create empty array to hold final results   
+    var i = arr.length; // get length of array 
+    var j = 0; // sub array 
+    var k = 0; // position in sub array
+    var l = arr[j].length;  // get length of sub array  
+    var largest = arr[j][k]; // sets first number in first sub array as largest
+    var next = arr[j][k+1]; // gets next number in array
+ for (var m = l; m > 0; m--) { // loop through sub array elements as long as array has more than 1 value 
+     
+    // check relative values of array elements
+    if (largest > next) {  // if largest number is larger than next
+            k++;     // skip to next position in array & re-run loop to check again
+              console.log("current position in array is " + k);
+        } else {  // otherwise
+            largest = next; // set "next" number as largest 
+                console.log("current largest value is " + largest);
+            k++; // move to next position in sub array
+                console.log("current position in array is " + k);
+            var following = arr[j][k+1]; // get next number and call it "following"
+                console.log("current following value is " + following);
+            next = following; // set "next" as "following" & re-run loop to check again
+                console.log("current next value is " + next);
+            } largestArray.push(largest); // push resulting largest number to new array      
+    }   return largestArray; // return array of largest numbers from sub arrays
+} 
+
+
+largestOfFour([[32, 35, 37, 39], [4, 5, 1, 3], [13, 27, 18, 26], [1000, 1001, 857, 1]]);
 
 
