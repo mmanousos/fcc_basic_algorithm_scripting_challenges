@@ -1,10 +1,18 @@
 function confirmEnding(str, target) {
-  // "Never give up and good luck will find you."
-  // -- Falcor
+  
   return str;
 }
 
 confirmEnding("Bastian", "n");
+
+
+// check length of target
+// get that many digits at end of str
+// check last letter of target against last letter at end of str
+    // if not the same, return false
+    // if match, cycle to next letters
+// when at end of length of target, return true
+
 
 
 /* Check if a string (first argument, str) ends with the given target string (second argument, target). 
