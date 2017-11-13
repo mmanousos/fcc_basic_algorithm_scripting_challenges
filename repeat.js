@@ -1,6 +1,10 @@
 function repeatStringNumTimes(str, num) {
-  // repeat after me
-  return str;
+    var newArr = [];
+        console.log
+    if (num < 0) {
+        newArr.push("");
+        return newArr.toString();
+    }
 }
 
 // create new array
