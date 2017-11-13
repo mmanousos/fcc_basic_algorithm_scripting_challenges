@@ -1,21 +1,25 @@
 function confirmEnding(str, target) {
     var targetDigits = target.length; // gets length of target
         console.log("target phrase is " + targetDigits + " characters long.")
-    var targetLetter = target.charAt(targetDigits-1); // gets final letter of target
-        console.log('last letter of "target" is ' + targetLetter);
+    var letterDigit = 1;    
+    var targetLetter = target.charAt(targetDigits-letterDigit); // gets final letter of target
+        console.log('current letter of "target" is ' + targetLetter);
     var strDigits = str.length; // gets length of string
-    var strLetter = str.charAt(strDigits-1); // gets final letter of str 
-        console.log('last letter of "string" is ' + strLetter);
+    var strLetter = str.charAt(strDigits-letterDigit); // gets final letter of str 
+        console.log('current letter of "str" is ' + strLetter);
     if (targetLetter !== strLetter) { // check if last letters match
         return false; // if no, return false
-     /*   } else if (targetDigits > 1 ) {     */ // if the target is longer than 1 character long, run loop to check additional letters. 
-                
-        } else {
-            return true;
-        }
+        } else if (targetDigits > 1 ) {    // if yes AND the target is longer than 1 character long, run loop to check additional letters. 
+            while (targetDigits > 1) { // while the digits in the target > 1
+                letterDigit++; // get the next last character in the phrase & string 
+                targetDigits--; // reduce number of digits in target to have an end point for the loop
+                }
+            } else { // otherwise return true
+                return true;
+            }
 }
 
-confirmEnding("Bastian", "n");
+confirmEnding("Open sesame", "same");
 
 
 // check length of target
