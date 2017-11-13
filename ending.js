@@ -1,18 +1,14 @@
 function confirmEnding(str, target) {
-    var targetDigits = target.length; // gets length of target
-        console.log("target phrase is " + targetDigits + " characters long.")
-    var strDigits = str.length; // gets length of string
-    var letterDigit = 1;    
-while (targetDigits > 0) {
-    var targetLetter = target.charAt(targetDigits-letterDigit); // gets final letter of target
-        console.log('current letter of "target" is ' + targetLetter);
-    var strLetter = str.charAt(strDigits-letterDigit); // gets final letter of str 
-        console.log('current letter of "str" is ' + strLetter);
+    var i = target.length; // gets length of target
+    var j = str.length; // gets length of string
+while (i > 0) { // while target has characters to check
+    var targetLetter = target.charAt(i - 1); // gets final letter of target
+    var strLetter = str.charAt(j - 1); // gets final letter of str 
     if (targetLetter !== strLetter) { // check if last letters match
         return false; // if no, return false
-        } else if ( targetDigits > 1 ) { // if "target" is more than 1 char long
-            letterDigit++;  // move to next character
-            targetDigits--;  // reduce length of "target" phrase
+        } else if ( i > 1 ) { // if "target" is more than 1 char long
+            i--; // move to next character
+            j--; // move to next character
         } else { // otherwise, return true
             return true; 
         }
