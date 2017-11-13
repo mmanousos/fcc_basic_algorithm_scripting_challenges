@@ -1,22 +1,22 @@
 function confirmEnding(str, target) {
     var targetDigits = target.length; // gets length of target
         console.log("target phrase is " + targetDigits + " characters long.")
+    var strDigits = str.length; // gets length of string
     var letterDigit = 1;    
+while (targetDigits > 0) {
     var targetLetter = target.charAt(targetDigits-letterDigit); // gets final letter of target
         console.log('current letter of "target" is ' + targetLetter);
-    var strDigits = str.length; // gets length of string
     var strLetter = str.charAt(strDigits-letterDigit); // gets final letter of str 
         console.log('current letter of "str" is ' + strLetter);
     if (targetLetter !== strLetter) { // check if last letters match
         return false; // if no, return false
-        } else if (targetDigits > 1 ) {    // if yes AND the target is longer than 1 character long, run loop to check additional letters. 
-            while (targetDigits > 1) { // while the digits in the target > 1
-                letterDigit++; // get the next last character in the phrase & string 
-                targetDigits--; // reduce number of digits in target to have an end point for the loop
-                }
-            } else { // otherwise return true
-                return true;
-            }
+        } else if ( targetDigits > 1 ) { // if "target" is more than 1 char long
+            letterDigit++;  // move to next character
+            targetDigits--;  // reduce length of "target" phrase
+        } else { // otherwise, return true
+            return true; 
+        }
+    }
 }
 
 confirmEnding("Open sesame", "same");
