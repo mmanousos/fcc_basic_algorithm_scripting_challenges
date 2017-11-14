@@ -1,15 +1,30 @@
 function truncateString(str, num) {
-  // Clear out that junk in your trunk
-  return str;
+    var i = str.length;
+    if (i > num) {
+        var j = str.substring(num-1);
+            console.log(j);
+        
+        // var j = Array.from(str);
+        // var k = j.slice();  
+        // var newStr = k.substr(num-1); 
+        //    console.log(newStr);
+        // var k = j.substring(11);
+    }
+  // return newStr;
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
 
 // get length of string
 // check against "num" 
-// slice to create duplicate string
-// create substring only as long as "num" 
-// if longer than num, add three dots 
+// if num > string
+    // if num is <= 3      
+        // create substring only as long as "num" 
+        
+    // else 
+        // create substring shorter than "num" by 3
+
+    // add three dots
 // return new substring
 
 
