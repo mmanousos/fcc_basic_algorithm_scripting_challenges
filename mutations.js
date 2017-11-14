@@ -1,11 +1,21 @@
 
 function mutation(arr) {
+    var i = arr.indexOf
   return arr;
 }
 
 mutation(["hello", "hey"]);
 
-/* -- PSEUDOCODE -- */
+/* -- PSEUDOCODE using indexOf -- */
+
+// get first letter of second element in array (charAt) 
+    // loop through and compare to letters in first element in array - using indexOf
+        // at end of loop, if letter not present, return false
+        // else loop to next letter in second element
+// return true
+
+
+/* -- PSEUDOCODE using while loop only -- */
 
 // parse two elements of array into separate variables? 
 // get length of each element
