@@ -1,18 +1,16 @@
 function chunkArrayInGroups(arr, size) {
     var newArr = [];
     var i = arr.length;
-    var position = 0;
-    while (i > 0) {
-        var chunk = arr.slice(position, size);
-        newArr.push(chunk);
-        i = i-size;
-        position = position+size;
-        size = size+size;
-    }
-  return newArr;
+     while (i > 0) {
+        var chunk = arr.slice(0, size); // create pieces
+        newArr.push(chunk); // push pieces to new array
+        i = i-size; // reduce length of array to move to next elements in array
+        arr.splice(0, size); // remove elements of original array to ensure pulling correct elements through loop
+     }
+   return newArr;
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4);
 
 /* -- PSEUDOCODE -- */
 
