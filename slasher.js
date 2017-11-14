@@ -1,6 +1,6 @@
 function slasher(arr, howMany) {
-  // it doesn't always pay to be first
-  return arr;
+    var i = arr.splice(howMany);
+    return i;
 }
 
 slasher([1, 2, 3], 2);
