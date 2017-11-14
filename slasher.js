@@ -5,7 +5,10 @@ function slasher(arr, howMany) {
 
 slasher([1, 2, 3], 2);
 
+/* -- PSEUDOCODE -- */
 
+// remove "howMany" elements from head of array
+// return truncated array
 
 
 /* -- ASSIGNMENT -- */
