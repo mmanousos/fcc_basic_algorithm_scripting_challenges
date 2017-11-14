@@ -1,9 +1,28 @@
 function chunkArrayInGroups(arr, size) {
-  // Break it up.
-  return arr;
+    var newArr = [];
+    var i = arr.length;
+    var position = 0;
+    while (i > 0) {
+        var chunk = arr.slice(position, size);
+        newArr.push(chunk);
+        i = i-size;
+        position = position+size;
+        size = size+size;
+    }
+  return newArr;
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+/* -- PSEUDOCODE -- */
+
+// create new array
+// check length of original array
+// loop while remaining el in array
+    // slice el out of original array (based on "size") into separate array
+    // reduce length of array by "size"
+    // push separate array into new array
+// return new array
 
 
 /* -- ASSIGNEMENT -- */ 
