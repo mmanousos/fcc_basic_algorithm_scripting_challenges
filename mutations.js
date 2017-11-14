@@ -1,4 +1,20 @@
 
+function mutation(arr) {
+  return arr;
+}
+
+mutation(["hello", "hey"]);
+
+/* -- PSEUDOCODE -- */
+
+// parse two elements of array into separate variables? 
+// get length of each element
+// while loop
+    // check first letter of second element against each letter of first element
+        // if not present, return false
+        // else, move to next letter in second element 
+// return true
+
 
 
 /* -- ASSIGNMENT -- */
