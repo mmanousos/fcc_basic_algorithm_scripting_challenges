@@ -5,6 +5,13 @@ function truncateString(str, num) {
 
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
 
+// get length of string
+// check against "num" 
+// slice to create duplicate string
+// create substring only as long as "num" 
+// if longer than num, add three dots 
+// return new substring
+
 
 /* Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
