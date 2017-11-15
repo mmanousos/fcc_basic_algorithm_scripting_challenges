@@ -1,6 +1,11 @@
 function destroyer(arr) {
-  // Remove all the values
-  return arr;
+    var filteredArr = arr.filter(function(el) {
+        {
+            
+        }
+       return el 
+    });
+  return filteredArr;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
