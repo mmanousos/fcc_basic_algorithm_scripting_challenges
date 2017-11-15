@@ -5,6 +5,11 @@ function destroyer(arr) {
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+/* -- PSEUDOCODE -- */
+
+// create function for filter array
+// check array elements against passed arguments 
+// return filtered array
 
 /* -- ASSIGNMENT -- */
 
