@@ -1,23 +1,24 @@
-// doesn't check against second argument
+// works but isn't very elegant
 
 function destroyer(arr) {
     var i = arguments.length; // determine how many arguments were passed. One will be the array itself.
     // start while loop checking against arguments starting at argument position 1
-    while (i > 1) {
-        var j = 1;
-        var k = argument[j];
-        var filteredArr = arr.filter(function(el) {    
-            if ( el !== k ) {
-                return el;         
-            }
-            j++;
-            i--;
+    var j = 1; // set start point for arguments
+    while (i > 1) { // while the length of arguments is more than 1 (more than just the array)
+        var k = arguments[j]; // start with first argument (that isn't the array)
+        var filteredArr = arr.filter(function(el) { // filter original array based on elements   
+            if ( el !== k ) { // if element = argument
+              return el; // add it to the array
+            } 
         }); 
+        j++; // move to next argument
+        i--; // reduce the count of the original arguments
+        arr = filteredArr; //reassigns filtered array as original arr to run again against subsequent arguments
     }
   return filteredArr;
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer(["tree", "hamburger", 53], "tree", 53);
 
 /* -- PSEUDOCODE -- */
 
