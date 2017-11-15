@@ -1,10 +1,19 @@
+// doesn't check against second argument
+
 function destroyer(arr) {
-    var filteredArr = arr.filter(function(el) {
-        {
-            
-        }
-       return el 
-    });
+    var i = arguments.length; // determine how many arguments were passed. One will be the array itself.
+    // start while loop checking against arguments starting at argument position 1
+    while (i > 1) {
+        var j = 1;
+        var k = argument[j];
+        var filteredArr = arr.filter(function(el) {    
+            if ( el !== k ) {
+                return el;         
+            }
+            k++;
+            i--;
+        }); 
+    }
   return filteredArr;
 }
 
@@ -14,6 +23,7 @@ destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
 // create function for filter array
 // check array elements against passed arguments 
+    // not sure how to check the arguments, maybe this is why they're suggesting to reference the arguments object
 // return filtered array
 
 /* -- ASSIGNMENT -- */
