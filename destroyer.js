@@ -10,7 +10,7 @@ function destroyer(arr) {
             if ( el !== k ) {
                 return el;         
             }
-            k++;
+            j++;
             i--;
         }); 
     }
