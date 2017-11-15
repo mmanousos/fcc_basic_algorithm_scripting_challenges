@@ -1,5 +1,6 @@
 function mutation(arr) {
-    var a = arr[0].length;
+    var newString = arr.join(",").toLowerCase();
+    var reArr = newString.split(",");
     var b = arr[1].length;
     var h = 0; 
  while (b > 0) {
