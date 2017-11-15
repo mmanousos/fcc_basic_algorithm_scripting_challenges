@@ -1,12 +1,26 @@
-
 function mutation(arr) {
-    var i = arr.indexOf
-  return arr;
-}
+    var b = arr[1].length;
+    var h = 0;
+    var i = arr[1].charAt(h); // get value of specific character in array
+    var j = arr[0].indexOf(i, 0); // runs through entire array checking for specified value
+    if (j < 0 ) {
+      return false;
+        } else {
+            while (b > 0) {
+              h++;
+              b--;     
+            }
+        }  return true; 
+    }
 
 mutation(["hello", "hey"]);
 
+
+
+
 /* -- PSEUDOCODE using indexOf -- */
+/* e.g. var result = pens.indexOf(“orange”, 1); */
+/* returns position of value in array -> not helpful for my logic */
 
 // get first letter of second element in array (charAt) 
     // loop through and compare to letters in first element in array - using indexOf
