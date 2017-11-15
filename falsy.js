@@ -1,12 +1,16 @@
 
 function bouncer(arr) {
-  // Don't show a false ID to this bouncer.
-  return arr;
+    var truthyArr = arr.filter(function(el) { // set up to create filtered array sorted by elements of original array
+        if (el != false) { // check if elements evaluate to "falsy" 
+            return el; // return all but those "falsy" elements into new filtered array
+        }
+    }); 
+  return truthyArr; // return new filtered array
 }
 
-bouncer([7, "ate", "", false, 9]);
-
-
+bouncer([1, null, NaN, 2, undefined]);
+    
+    
 /* -- PSEUDOCODE -- */
 
 // filter array checking if elements of array are false
