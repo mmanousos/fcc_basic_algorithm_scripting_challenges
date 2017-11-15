@@ -1,17 +1,19 @@
 function mutation(arr) {
+    var a = arr[0].length;
     var b = arr[1].length;
-    var h = 0;
-    var i = arr[1].charAt(h); // get value of specific character in array
-    var j = arr[0].indexOf(i, 0); // runs through entire array checking for specified value
-    if (j < 0 ) {
+    var h = 0; 
+ while (b > 0) {
+  var i = arr[1].charAt(h); // gets character of second array
+  var j = arr[0].indexOf(i, 0); // runs through entire first array checking for specified value
+    if (j < 0 ) { // if character is not present, indexOf returns -1
       return false;
-        } else {
-            while (b > 0) {
-              h++;
-              b--;     
-            }
-        }  return true; 
-    }
+    } else {
+          h++; 
+          b--;     
+        }
+    }  return true; 
+}
+
 
 mutation(["hello", "hey"]);
 
