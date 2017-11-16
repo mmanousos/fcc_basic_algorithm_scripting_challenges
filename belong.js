@@ -1,9 +1,29 @@
 function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return num;
+    function ascending( a, b ) { //create a function that checks if each array element is larger than the other
+        return a - b;  // if a - b is negative, a should come before b in the sort order
+    }
+    var sorted = arr.sort(ascending); // pass the function into the sort method to sort the array in ascending order
+
+    var c = sorted.length; // get the length of the array
+    var arg = arguments[1]; // get the argument to check 
+    var d = 0; // set the place to start cycling through the array
+    while (c > -1) { // loop through the array while the length of the array is positive
+        if (c == 0) { // if the array length gets to 0, then the argument belongs at the final position in the array
+          var l = sorted.length; // final position is equivalent to the length of the array (easier than having the script get the indexOf the final element and adding one)
+          return l; } // return this final position
+    var el = arr[d]; // get the value of the array element
+        if (arg <= el) { // compare it to the argument, if the argument is lower or equal
+          var k = sorted.indexOf(el, 0); // get the position of that element
+          return k; // return the position
+        } 
+          else { // otherwise
+          c--; // move reduce the length of the array
+          d++; // and move to the next element in the array to run the comparison again
+        } 
+    } 
 }
 
-getIndexToIns([40, 60], 50);
+getIndexToIns([10, 20, 30, 40, 50], 30); 
 
 /* -- PSEUDOCODE -- */
 
