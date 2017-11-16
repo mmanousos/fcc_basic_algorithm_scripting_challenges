@@ -5,7 +5,13 @@ function getIndexToIns(arr, num) {
 
 getIndexToIns([40, 60], 50);
 
+/* -- PSEUDOCODE -- */
 
+// sort array
+// get value of argument
+// sequentially compare value of argument against each array element 
+// if argument is smaller than array element, get index position of that element
+// return index position
 
 
 /* -- ASSIGNMENT -- */
