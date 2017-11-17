@@ -1,20 +1,34 @@
-
 function rot13(str) { // LBH QVQ VG!
-  
-  return str;
+  var decyphered = ""; 
+  var i = str.length;
+  var j = 0;
+  while (i > 0) {
+      var k = str[j];
+      if ( k !== '[.,\/#!$%\^&\*;:{}=\-_`~()]' ) {
+          console.log(k);
+          j++; 
+          i--;
+      } else {
+        decyphered = decyphered + k;
+        console.log(decyphered);
+      }
+  }
 }
 
-// Change the inputs below to test
-rot13("SERR PBQR PNZC");
+
+rot13("!SERR PBQR PNZC");
+
 
 /* -- PSEUDOCODE -- */
 
 // Get length of string.
 // loop while string has remaining characters
 // Get each character in string
-    // check that it's a letter
+    // check that it's a letter (using regex?)
         // if letter, get its character code
         // subtract 13 from character code
+            // -13 = less than 65 instead +13
+            // use that value
         // convert character code to string 
         // push string to new string?
     // if not letter (is space or punctuation), push to new string
