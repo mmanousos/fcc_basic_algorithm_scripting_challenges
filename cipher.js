@@ -7,6 +7,20 @@ function rot13(str) { // LBH QVQ VG!
 // Change the inputs below to test
 rot13("SERR PBQR PNZC");
 
+/* -- PSEUDOCODE -- */
+
+// Get length of string.
+// loop while string has remaining characters
+// Get each character in string
+    // check that it's a letter
+        // if letter, get its character code
+        // subtract 13 from character code
+        // convert character code to string 
+        // push string to new string?
+    // if not letter (is space or punctuation), push to new string
+// return string
+
+
 
 /* -- ASSIGNMENT -- */
 
