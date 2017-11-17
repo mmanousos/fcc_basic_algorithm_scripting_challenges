@@ -1,22 +1,32 @@
 function rot13(str) { // LBH QVQ VG!
-  var decyphered = ""; 
-  var i = str.length;
-  var j = 0;
-  while (i > 0) {
-      var k = str[j];
-      if ( k !== '[.,\/#!$%\^&\*;:{}=\-_`~()]' ) {
-          console.log(k);
-          j++; 
-          i--;
-      } else {
-        decyphered = decyphered + k;
-        console.log(decyphered);
-      }
-  }
+  var decyphered = "";  // create empty string
+  var i = str.length; // get length of original string
+  var j = 0; // start value for checking string
+  while (i > 0) { // loop while string has values remaining
+      var k = str.charCodeAt(j); // get the character code for the elements of the string
+      if (k >= 65) { // if the character code is within the range of capitalized letters
+          var m = k - 13; // subtract 13
+          if (m < 65) { // if that puts it below the range of capialized letters
+              var n = k + 13; // add 13 to the character code 
+              var o = String.fromCharCode(n); // convert the new code to a letter
+              decyphered = decyphered + o; // add the letter to the string
+          } else { // otherwise
+              var p = String.fromCharCode(m); // convert the -13 code to a letter
+              decyphered = decyphered + p; // add the letter to the string
+          }
+          j++; // move to next value in string
+          i--; // reduce the length of the string
+      } else { // if the character is not in the range of capitalized letters
+        var l = String.fromCharCode(k); // convert back to its original character
+        decyphered = decyphered + l; // add the character to the string
+          j++; // move to next value in string
+          i--; // reduce the length of the string
+    } 
+  } return decyphered;
 }
 
 
-rot13("!SERR PBQR PNZC");
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."); 
 
 
 /* -- PSEUDOCODE -- */
